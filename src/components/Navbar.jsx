@@ -25,8 +25,8 @@ const Navbar = () => {
   });
 
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm">
+    <div className="max-w-11/12 mx-auto">
+      <div className="navbar">
         <div className="flex-1">
           <a className="text-[#130B2D] font-semibold text-xl">
             CS — Ticket System
@@ -56,13 +56,13 @@ const Navbar = () => {
         </div>
         {/* Mobile Menu */}
         <div
-          className={`absolute right-0 top-16 w-full bg-transparent backdrop-blur-2xl transition-all duration-300 ${
+          className={`absolute right-0 top-16 z-50 w-full bg-transparent backdrop-blur-xl  transition-all duration-300 ${
             isOpen
               ? "translate-y-0 opacity-100"
               : "-translate-y-10 opacity-0 pointer-events-none"
           }`}
         >
-          <ul className="flex flex-col items-center py-6 space-y-4">
+          <ul className="flex flex-col items-center text-white py-6 space-y-4">
             {navlinks}
             <button className="bg-linear-to-r mx-auto  from-[#632EE3] to-[#9F62F2] btn">
               <FaPlus /> New Ticket

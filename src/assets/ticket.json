@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Login page not loading",
+    "description": "Users are unable to access the login page after deployment.",
+    "customer": "Rahim Uddin",
+    "priority": "High",
+    "status": "In-Progress",
+    "createdAt": "2026-03-01T10:15:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Payment gateway error",
+    "description": "Payment fails during checkout process.",
+    "customer": "Nusrat Jahan",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "2026-03-01T12:40:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Profile image upload issue",
+    "description": "Profile images are not being saved in the database.",
+    "customer": "Tanvir Hasan",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2026-03-02T09:25:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Dashboard stats mismatch",
+    "description": "Statistics are not updating in real-time.",
+    "customer": "Sadia Akter",
+    "priority": "High",
+    "status": "In-Progress",
+    "createdAt": "2026-03-02T14:10:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Forgot password email not sent",
+    "description": "Users are not receiving password reset emails.",
+    "customer": "Mehedi Islam",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "2026-03-02T18:55:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Mobile menu not responsive",
+    "description": "Navigation menu breaks on smaller devices.",
+    "customer": "Farhana Karim",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2026-03-03T08:30:00Z"
+  },
+  {
+    "id": 7,
+    "title": "API response delay",
+    "description": "Server response time is higher than expected.",
+    "customer": "Arif Hossain",
+    "priority": "High",
+    "status": "In-Progress",
+    "createdAt": "2026-03-03T11:45:00Z"
+  },
+  {
+    "id": 8,
+    "title": "Search feature not working",
+    "description": "Search returns empty results even for valid queries.",
+    "customer": "Jannatul Ferdous",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-03T15:20:00Z"
+  },
+  {
+    "id": 9,
+    "title": "Notification badge incorrect",
+    "description": "Unread notification count is incorrect.",
+    "customer": "Rakib Ahmed",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2026-03-03T19:05:00Z"
+  },
+  {
+    "id": 10,
+    "title": "User role permission bug",
+    "description": "Admin role cannot update user permissions.",
+    "customer": "Shamima Sultana",
+    "priority": "High",
+    "status": "In-Progress",
+    "createdAt": "2026-03-04T07:50:00Z"
+  },
+  {
+    "id": 11,
+    "title": "Data export CSV broken",
+    "description": "CSV file downloads empty despite available data.",
+    "customer": "Mizanur Rahman",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-04T09:15:00Z"
+  },
+  {
+    "id": 12,
+    "title": "UI alignment issue",
+    "description": "Buttons are misaligned on the settings page.",
+    "customer": "Sumaiya Rahman",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2026-03-04T11:30:00Z"
+  },
+  {
+    "id": 13,
+    "title": "Session timeout too short",
+    "description": "Users are logged out after 5 minutes of inactivity.",
+    "customer": "Hasan Mahmud",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-04T13:05:00Z"
+  },
+  {
+    "id": 14,
+    "title": "Dark mode toggle not saving",
+    "description": "Theme preference resets after page refresh.",
+    "customer": "Lamia Islam",
+    "priority": "Low",
+    "status": "In-Progress",
+    "createdAt": "2026-03-04T14:45:00Z"
+  },
+  {
+    "id": 15,
+    "title": "File upload size limit error",
+    "description": "System throws error for files under allowed size.",
+    "customer": "Imran Chowdhury",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-04T16:20:00Z"
+  }
+]
