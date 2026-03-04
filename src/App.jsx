@@ -6,7 +6,7 @@ import Banner from "./banner/Banner";
 import CustomerTickets from "./customerTickets/CustomerTickets";
 
 function App() {
-  const [progressTask, setProgrssTask] = useState(0);
+  const [progressTaskCount, setprogrssTaskCount] = useState(0);
   const [resolveTask, setResolveTask] = useState(0);
   return (
     <>
@@ -14,10 +14,13 @@ function App() {
         <Navbar />
       </header>
       <main className="bg-[#62738220] min-h-screen">
-        <Banner progressTask={progressTask} resolveTask={resolveTask} />
+        <Banner
+          progressTaskCount={progressTaskCount}
+          resolveTask={resolveTask}
+        />
         <CustomerTickets
-          progressTask={progressTask}
-          setProgrssTask={setProgrssTask}
+          progressTaskCount={progressTaskCount}
+          setprogrssTaskCount={setprogrssTaskCount}
           resolveTask={resolveTask}
           setResolveTask={setResolveTask}
         />

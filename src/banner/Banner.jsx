@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import vectorBg from "../assets/vector1.png";
 
-const Banner = ({ progressTask, resolveTask }) => {
+const Banner = ({ progressTaskCount, resolveTask }) => {
   return (
     <div className="grid max-w-11/12 mx-auto md:grid-cols-2 gap-4 p-4">
       {/* In-Progress Card */}
@@ -15,7 +15,7 @@ const Banner = ({ progressTask, resolveTask }) => {
         }}
       >
         <p className="text-xl font-medium opacity-90">In-Progress</p>
-        <h2 className="text-6xl font-bold mt-2">{progressTask}</h2>
+        <h2 className="text-6xl font-bold mt-2">{progressTaskCount}</h2>
       </div>
 
       {/* Resolved Card */}
