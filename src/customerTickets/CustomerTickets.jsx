@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import tickets from "../assets/ticket.json";
 import TicketCard from "../components/TicketCard";
 
-const CustomerTickets = ({ progrssTaskCount, setprogrssTaskCount }) => {
+const CustomerTickets = ({ setprogrssTaskCount, setresolveTaskCount }) => {
   const [filterTicets, setFilterTicets] = useState(tickets);
-  console.log("filter tickets ", filterTicets);
   const [progressTask, setProgressTask] = useState([]);
+  const [resolveTask, setResolveTask] = useState([]);
 
   const handleClick = (id) => {
     // progress count update
@@ -18,6 +18,18 @@ const CustomerTickets = ({ progrssTaskCount, setprogrssTaskCount }) => {
     const selectTask = tickets.find((ticket) => ticket.id === id);
     if (selectTask) {
       setProgressTask((prv) => [...prv, selectTask]);
+    }
+  };
+
+  const handleComplete = (id) => {
+    setresolveTaskCount((prv) => prv + 1);
+    setprogrssTaskCount((pre) => pre - 1);
+    setProgressTask(
+      progressTask.filter((progressTask) => progressTask.id !== id),
+    );
+    const completeTask = tickets.find((ticket) => ticket.id === id);
+    if (completeTask) {
+      setResolveTask((pre) => [...pre, completeTask]);
     }
   };
 
@@ -56,7 +68,12 @@ const CustomerTickets = ({ progrssTaskCount, setprogrssTaskCount }) => {
                   <h2 className="text-[#001931] py-4 text-xl">
                     {progress.title}
                   </h2>
-                  <button className="btn w-full  text-white bg-[#02A53B]">
+                  <button
+                    onClick={() => {
+                      handleComplete(progress.id);
+                    }}
+                    className="btn w-full  text-white bg-[#02A53B]"
+                  >
                     Complete
                   </button>
                 </div>
@@ -66,9 +83,20 @@ const CustomerTickets = ({ progrssTaskCount, setprogrssTaskCount }) => {
         </div>
         <div className=" text-xl md:text-2xl text-[#34485A] font-semibold py-8">
           <h2>Task complete</h2>
-          <p className="text-[12px] text-[#627382] py-3 ">
-            No resolved tasks yet.
-          </p>
+          {resolveTask.length === 0 ? (
+            <p className="text-[12px] text-[#627382] py-3 ">
+              No resolved tasks yet.
+            </p>
+          ) : (
+            resolveTask.map((resolveTask) => (
+              <div
+                key={resolveTask.id}
+                className="bg-[#E0E7FF] px-1 text-center text-[#001931] text-[18px] py-4 m-4 "
+              >
+                {resolveTask.title}
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>
