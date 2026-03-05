@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import tickets from "../assets/ticket.json";
 import TicketCard from "../components/TicketCard";
+import { toast } from "react-toastify";
 
 const CustomerTickets = ({ setprogrssTaskCount, setresolveTaskCount }) => {
   const [filterTicets, setFilterTicets] = useState(tickets);
@@ -19,6 +20,7 @@ const CustomerTickets = ({ setprogrssTaskCount, setresolveTaskCount }) => {
     if (selectTask) {
       setProgressTask((prv) => [...prv, selectTask]);
     }
+    toast.success("Ticket moved to In Progress successfully");
   };
 
   const handleComplete = (id) => {
@@ -31,6 +33,7 @@ const CustomerTickets = ({ setprogrssTaskCount, setresolveTaskCount }) => {
     if (completeTask) {
       setResolveTask((pre) => [...pre, completeTask]);
     }
+    toast.success("Ticket resolved successfully");
   };
 
   return (
